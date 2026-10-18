@@ -1,0 +1,16 @@
+{
+  "name": "DeAI Mobile",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bookworm",
+  "postCreateCommand": "bash .devcontainer/install_mobile.sh",
+  "postStartCommand": "bash .devcontainer/start_mobile.sh",
+  "forwardPorts": [
+    8000
+  ],
+  "portsAttributes": {
+    "8000": {
+      "label": "DeAI Mobile",
+      "onAutoForward": "openBrowser",
+      "visibility": "private"
+    }
+  }
+}

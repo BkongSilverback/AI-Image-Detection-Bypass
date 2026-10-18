@@ -1,0 +1,40 @@
+name: DeAI Mobile quick check
+on:
+  push:
+    paths:
+      - phone_app.py
+      - scripts/deai.py
+      - .github/workflows/deai-mobile-check.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install lightweight mobile dependencies
+        run: python -m pip install Pillow numpy opencv-python-headless rich requests
+      - name: Check Python syntax and real light/medium processing
+        run: |
+          python -m py_compile phone_app.py scripts/deai.py
+          python - <<'PY'
+          from io import BytesIO
+          from PIL import Image, ImageDraw
+          from phone_app import run_engine, unpack_form
+          im = Image.new('RGB', (256,256), 'white')
+          d = ImageDraw.Draw(im)
+          d.rectangle((20, 20, 170, 160), fill='black')
+          d.ellipse((70,70,230,230), fill=(130,130,130))
+          b = BytesIO()
+          im.save(b, 'PNG')
+          for strength in ('light','medium'):
+              image = run_engine(b.getvalue(), strength)
+              with Image.open(BytesIO(image)) as out:
+                  out.verify()
+              print(strength, "processed OK", len(image), "bytes")
+          PY

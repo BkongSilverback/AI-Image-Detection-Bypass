@@ -1,3 +1,5 @@
+> 📱 **DeAI Mobile (Android-friendly):** [Open the phone app in a new GitHub Codespace](https://codespaces.new/BkongSilverback/AI-Image-Detection-Bypass) — no commands required after setup. [Easy instructions](MOBILE_APP_README.md). Keep the forwarded port **Private**.
+
 # 🛡️ AI Image De-Fingerprinting & Anti-Detection Suite (v2.0)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)

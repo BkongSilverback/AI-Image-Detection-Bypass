@@ -82,8 +82,8 @@ Modern AI detectors do not simply inspect metadata; they evaluate deep mathemati
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/swaylq/deai-image.git
-cd deai-image
+git clone https://github.com/BkongSilverback/AI-Image-Detection-Bypass.git
+cd AI-Image-Detection-Bypass
 
 # Install Python requirements
 pip install -r requirements.txt
@@ -100,9 +100,11 @@ playwright install chromium
 
 ### Windows One-Click Launcher
 
-Double click `iniciar_deai.bat` in the root folder to start the interactive rich terminal UI.
+Double click `start_deai.bat` in the `AI-Image-Detection-Bypass` root folder to start the interactive rich terminal UI.
 
 ### Command Line Interface
+
+Run these commands from the `AI-Image-Detection-Bypass` repository root:
 
 ```bash
 # Basic run with auto-detected GPU and default balanced profile
@@ -163,7 +165,7 @@ To enable automated testing against official detector APIs:
 ## 📁 Repository Structure
 
 ```text
-deai-image/
+AI-Image-Detection-Bypass/
 ├── examples/
 │   ├── sample_input.jpg          # Original AI-generated test sample
 │   └── sample_output.jpg         # De-AI processed result (0.1% Sightengine score)
@@ -180,12 +182,13 @@ deai-image/
 │   └── iphone15pm.json           # Calibration profile for iPhone 15 Pro Max
 ├── .gitignore                    # Protects API keys and local scratch
 ├── DEPLOYMENT.md                 # Technical deployment report & audit
-├── iniciar_deai.bat              # One-click Windows starter
+├── start_deai.bat                 # One-click Windows starter
 ├── LICENSE                       # MIT License
 ├── package.json                  # OpenClaw skill descriptor
+├── phone_app.py                   # DeAI Mobile web interface
+├── MOBILE_APP_README.md           # Mobile setup and usage
 ├── README.md                     # Documentation
-├── requirements.txt              # Pinned Python dependencies
-└── SKILL.md                      # AI agent interface definition
+└── requirements.txt              # Pinned Python dependencies
 ```
 
 ---

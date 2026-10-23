@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/swaylq/deai-image.git"
+    "url": "https://github.com/BkongSilverback/AI-Image-Detection-Bypass.git"
   },
   "keywords": [
     "ai-detection",
@@ -64,9 +64,9 @@
       }
     }
   },
-  "homepage": "https://github.com/swaylq/deai-image#readme",
+  "homepage": "https://github.com/BkongSilverback/AI-Image-Detection-Bypass#readme",
   "bugs": {
-    "url": "https://github.com/swaylq/deai-image/issues"
+    "url": "https://github.com/BkongSilverback/AI-Image-Detection-Bypass/issues"
   },
   "engines": {
     "node": ">=14.0.0"
